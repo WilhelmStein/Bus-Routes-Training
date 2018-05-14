@@ -4,7 +4,7 @@ from ast import literal_eval
 import itertools as it
 from numpy import mean
 
-trainSet = pd.read_csv('./sets/train_set.csv', converters={"Trajectory": literal_eval}, index_col='tripId')
+trainSet = pd.read_csv('../sets/train_set.csv', converters={"Trajectory": literal_eval}, index_col='tripId')
 count = 0
 lines = set()
 colours = [ 'cornflowerblue', 'red', 'orange', 'purple' , 'pink' ]
@@ -26,4 +26,5 @@ for jpid, traj in it.izip(trainSet['journeyPatternId'], trainSet['Trajectory']):
         gmap.plot(lats, lons, colours[count], edge_width=5)
         gmap.draw(name)
         count += 1
+        
 
