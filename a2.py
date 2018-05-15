@@ -11,6 +11,7 @@ from lcss import lcss
 
 trainSet = pd.read_csv('./sets/train_set.csv', converters={"Trajectory": literal_eval})
 testSet = pd.read_csv('./sets/test_set_a2.csv', converters={"Trajectory": literal_eval})
+#trainSet = trainSet[:100]
 queries = list()
 trains = list()
 
@@ -36,7 +37,7 @@ for query in queries:
     i = 0
     toSort = []
     for traj in trains:
-        sbsq = lcss(query, traj, 200)  
+        sbsq = lcss(query, traj, 0.2)  
         toSort.append((sbsq, i))
         i += 1
     Sorted = sorted(toSort, key = lambda x: len(x[0]))
