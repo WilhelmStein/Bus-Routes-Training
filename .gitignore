@@ -1,2 +1,3 @@
 .vscode
 visualization/plots
+*.pyc
