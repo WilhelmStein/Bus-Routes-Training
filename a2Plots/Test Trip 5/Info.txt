@@ -1,0 +1,6 @@
+Time : 225.51312089
+Neighbour 1 :	MatchingPoints : 71	 JPID : 01200001
+Neighbour 2 :	MatchingPoints : 71	 JPID : 01200001
+Neighbour 3 :	MatchingPoints : 72	 JPID : 01200002
+Neighbour 4 :	MatchingPoints : 73	 JPID : 01200001
+Neighbour 5 :	MatchingPoints : 73	 JPID : 01200001

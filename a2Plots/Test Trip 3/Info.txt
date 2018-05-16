@@ -1,0 +1,6 @@
+Time : 124.501532078
+Neighbour 1 :	MatchingPoints : 40	 JPID : 01451001
+Neighbour 2 :	MatchingPoints : 40	 JPID : 067X0001
+Neighbour 3 :	MatchingPoints : 40	 JPID : 01451001
+Neighbour 4 :	MatchingPoints : 40	 JPID : 01451001
+Neighbour 5 :	MatchingPoints : 40	 JPID : 066X0004

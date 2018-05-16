@@ -1,0 +1,6 @@
+Time : 181.556334972
+Neighbour 1 :	MatchingPoints : 59	 JPID : 00790001
+Neighbour 2 :	MatchingPoints : 59	 JPID : 00790001
+Neighbour 3 :	MatchingPoints : 59	 JPID : 00790001
+Neighbour 4 :	MatchingPoints : 59	 JPID : 00790001
+Neighbour 5 :	MatchingPoints : 59	 JPID : 00790001

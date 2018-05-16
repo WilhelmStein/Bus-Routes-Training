@@ -1,0 +1,6 @@
+Time : 258.328402042
+Neighbour 1 :	MatchingPoints : 75	 JPID : 040D1002
+Neighbour 2 :	MatchingPoints : 76	 JPID : 040D1002
+Neighbour 3 :	MatchingPoints : 76	 JPID : 040D1002
+Neighbour 4 :	MatchingPoints : 78	 JPID : 040D1002
+Neighbour 5 :	MatchingPoints : 78	 JPID : 040D1002
