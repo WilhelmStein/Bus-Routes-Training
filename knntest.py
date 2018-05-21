@@ -15,8 +15,18 @@ from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
 
+
+def appendLists(list1, list2):
+    retlist = list()
+    for elem in list1:
+        retlist.append(elem)
+    for elem in list2:
+        retlist.append(elem)
+    return retlist
+
+
 trainSet = pd.read_csv('./sets/train_set.csv', converters={"Trajectory": literal_eval})
-# trainSet = trainSet[:50]
+trainSet = trainSet[:len(trainSet) / 10]
 
 start = time.time()
 
@@ -36,7 +46,7 @@ for traj in trainSet["Trajectory"]:
     X.append(xi)
 
 
-k = 1
+k = 10
 size = len(X)
 
 precs = 0
@@ -45,22 +55,18 @@ f1s = 0
 accs = 0
 
 for i in xrange(0, k):
-    print i
+    print "Iteration : " + str(i)
     X_test = X[ (size / k) * i : (size / k) * (i + 1)]
-    X_train = X[: (size / k) * i] + X[(size / k) * (i + 1):]
+    X_train = appendLists(X[: (size / k) * i], X[(size / k) * (i + 1):])
 
     y_test = y[ (size / k) * i : (size / k) * (i + 1)]
-    y_train = y[: (size / k) * i] + y[(size / k) * (i + 1):]
+    y_train = appendLists(y[: (size / k) * i], y[(size / k) * (i + 1):])
 
     clf.fit(X_train, y_train)    
     predictions = clf.predict(X_test)
-    print "Preds"
-    print X_train
-    print "Trues"
-    print y_test
+
 
     precs += precision_score(y_test, predictions, average='macro')
-    print precs
     recs += recall_score(y_test, predictions, average='macro')
     f1s += f1_score(y_test, predictions, average='macro')
     accs += accuracy_score(y_test, predictions)
@@ -79,3 +85,5 @@ print "Accuracy : " + str(avgacc)
 end = time.time()
 duration = end - start
 print str(duration)
+
+

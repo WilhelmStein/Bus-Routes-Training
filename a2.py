@@ -36,7 +36,7 @@ for i in xrange(1, len(queries) + 1):
 
 toSort = list()
 TestTrips = list()
-# i iindex in train set
+# i is index in train set
 for query, file in izip(queries, fds):
     start = time.time()
 
