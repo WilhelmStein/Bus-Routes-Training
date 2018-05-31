@@ -52,7 +52,7 @@ class KNearestBrute:
                 maxkey = key
         return maxkey
 
-    # Euclidean distance of 2 vectors
+    # Harvesine distance of 2 trajectories
     def __distance(self, U, V):
         distance, __path = fastdtw(U, V, dist=harvesine)
         return distance

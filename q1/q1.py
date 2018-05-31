@@ -7,7 +7,7 @@ from numpy import mean
 trainSet = pd.read_csv('../sets/train_set.csv', converters={"Trajectory": literal_eval}, index_col='tripId')
 count = 0
 lines = set()
-colours = [ 'cornflowerblue', 'red', 'orange', 'purple' , 'pink' ]
+colours = [ 'cornflowerblue', 'red', 'orange', 'purple' , 'black' ]
 
 for jpid, traj in it.izip(trainSet['journeyPatternId'], trainSet['Trajectory']):
 
@@ -22,7 +22,7 @@ for jpid, traj in it.izip(trainSet['journeyPatternId'], trainSet['Trajectory']):
             lons.append(el[1])
             lats.append(el[2])
         gmap = gmplot.GoogleMapPlotter(mean(lats), mean(lons), 13)
-        name = "./plots/line" + str(count) + ".html"
+        name = "./q1plots/line" + str(count) + ".html"
         gmap.plot(lats, lons, colours[count], edge_width=5)
         gmap.draw(name)
         count += 1

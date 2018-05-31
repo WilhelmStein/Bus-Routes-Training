@@ -4,13 +4,12 @@ import pandas as pd
 from ast import literal_eval
 import itertools as it
 import time
-from dtwdistance import dtwdistance
 from sklearn.preprocessing import LabelEncoder
 from knearestbrute import KNearestBrute
 
 
-trainSet = pd.read_csv('./sets/train_set.csv', converters={"Trajectory": literal_eval})
-testSet = pd.read_csv('./sets/test_set_a2.csv', converters={"Trajectory": literal_eval})
+trainSet = pd.read_csv('../sets/train_set.csv', converters={"Trajectory": literal_eval})
+testSet = pd.read_csv('../sets/test_set_a2.csv', converters={"Trajectory": literal_eval})
 
 start = time.time()
 
@@ -44,7 +43,7 @@ predictions = clf.predict(X_test)
 predictions = le.inverse_transform(predictions)
 print predictions
 
-f = open("./sets/testSet_JourneyPatternIDs.csv", "w+")
+f = open("../sets/testSet_JourneyPatternIDs.csv", "w+")
 f.write("Test_Trip_ID\tPredicted_JourneyPatternID\n")
 
 for i in xrange(0, len(predictions)):

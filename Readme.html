@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="datamining-assignment-2">Datamining Assignment 2</h1>
+<h2 id="%CF%83%CF%85%CE%B3%CE%B3%CF%81%CE%B1%CF%86%CE%B5%CE%AF%CF%82">Συγγραφείς:</h2>
+<ul>
+<li>Ιωάννης Μαλιάρας : 1115201500084</li>
+<li>Ιωάννης Χείλαρης : 1115201500176</li>
+</ul>
+<h3 id="%CE%B3%CE%B5%CE%BD%CE%B9%CE%BA%CE%AD%CF%82-%CF%83%CE%B7%CE%BC%CE%B5%CE%B9%CF%8E%CF%83%CE%B5%CE%B9%CF%82">Γενικές Σημειώσεις:</h3>
+<ul>
+<li>Το παρόν αρχείο είναι γραμμένο σε Markdown. Μέσα στον φάκελο της εργασίας βρίσκονται το .md και το .pdf αρχείο.</li>
+<li>Οι πίνακες είναι αποθηκευμένοι με τη μορφή .png και βρίσκονται στο φάκελο <strong>Tables/</strong>.</li>
+<li>Όλα τα .csv αρχεία βρίσκονται στο φάκελο <strong>sets/</strong></li>
+</ul>
+<h2 id="%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1-1">Ερώτημα 1:</h2>
+<p>Το αρχείο που παράγει τους χάρτες σε μορφή html είναι το <strong>q1.py</strong></p>
+<p>Αρχικά, διαβάζει το αρχείο train_set.csv και παίρνει
+ενα – ενα τα entries έτσι ώστε να μην επιλέξει
+μια διαδρομή 2 φορές (με τη χρήση ενός set).
+Εν τέλει επιλέγει, έτσι, 5 διαφορετικές διαδρομές και τις
+κάνει plot. Τα html αρχεία είναι αποθηκευμένα στον φάκελο <strong>q1plots</strong>.
+Παρακάτω παρουσιάζονται τα αποτελέσματα του προγράμματος:</p>
+<p><img src="Tables/q1Lines.png" alt="q1Lines"></p>
+<h2 id="%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1-2">Ερώτημα 2:</h2>
+<h3 id="%CE%B11">Α1)</h3>
+<p>Ο αλγόριθμος DTW δεν υλοποιήθηκε από εμάς. Κατεβάσαμε την υλοποίση μέσω
+αυτου του <a href="https://pypi.org/project/fastdtw/">συνδέσμου</a></p>
+<p>Το αρχείο κώδικα που φτιάχτηκε για αυτό το ερώτημα είναι το <a href="./q2/a1/a1.py"><strong>a1.py</strong></a>, το οποίο διαβάζει τα 2 sets και κάνει τη δουλειά που του ζητείται.</p>
+<p>Όλα τα αρχεία του ερωτήματος βρίσκονται στον φάκελο <strong>a1/</strong>.
+Οι εικόνες και τα meta data του κάθε γείτονα κλπ
+βρίσκονται όλα ταξινομημένα στον φάκελο <strong>a1plots/</strong>.
+Για παραπάνω πληροφορίες, βλ. κώδικα.</p>
+<p>Τα αποτελέσματα του προγράμματος παρουσιάζονται παρακάτω :</p>
+<ul>
+<li>Test Trip 1</li>
+</ul>
+<p><img src="Tables/a1t1.png" alt="a1t1"></p>
+<ul>
+<li>Test Trip 2</li>
+</ul>
+<p><img src="Tables/a1t2.png" alt="a1t2"></p>
+<ul>
+<li>Test Trip 3</li>
+</ul>
+<p><img src="Tables/a1t3.png" alt="a1t3"></p>
+<ul>
+<li>Test Trip 4</li>
+</ul>
+<p><img src="Tables/a1t4.png" alt="a1t4"></p>
+<ul>
+<li>Test Trip 5</li>
+</ul>
+<p><img src="Tables/a1t5.png" alt="a1t5"></p>
+<h3 id="a2">A2)</h3>
+<p>Για κάθε ενα entry του αρχείου <a href="./sets/test_set_a2.csv"><strong>test_set_a2.csv</strong></a>, το πρόγραμμα <a href="./q2/a2/a2.py"><strong>a2.py</strong></a> ψάχνει τους 5 γείτονες με μέγιστη κοινή υπακολουθία σημείων διαδρομής μέσω brute force. Η εύρεση της μέγιστης κοινής υπακολουθίας 2 trajectories γίνεται με επαναληπτική δημιουργία του πίνακα του αλγορίθμου στον οποίο κάνουμε backtrack για να χτιστεί η μέγιστη κοινή υπακολουθία.<br>
+Ο αλγόριθμος γράφτηκε απο εμάς βάσει θεωρίας και ψευδοκώδικα της <a href="https://en.wikipedia.org/wiki/Longest_common_subsequence_problem">Wikipedia</a>.</p>
+<p>Όλα τα αρχεία του ερωτήματος αυτού βρίσκονται στον φάκελο <strong>a2/</strong>. Οι εικόνες και τα metadata (αποτελέσματα του προγράμματος) βρίσκονται στον φάκελο <strong>a2/a2Plots/</strong></p>
+<p>Τα αποτελέσματα του προγράμματος παρουσιάζονται παρακάτω:</p>
+<ul>
+<li>Test Trip 1</li>
+</ul>
+<p><img src="Tables/a2t1.png" alt="a2t1"></p>
+<ul>
+<li>Test Trip 2</li>
+</ul>
+<p><img src="Tables/a2t2.png" alt="a2t1"></p>
+<ul>
+<li>Test Trip 3</li>
+</ul>
+<p><img src="Tables/a2t3.png" alt="a2t1"></p>
+<ul>
+<li>Test Trip 4</li>
+</ul>
+<p><img src="Tables/a2t4.png" alt="a2t1"></p>
+<ul>
+<li>Test Trip 5</li>
+</ul>
+<p><img src="Tables/a2t5.png" alt="a2t1"></p>
+<h3 id="%CE%B5%CF%81%CF%8E%CF%84%CE%B7%CE%BC%CE%B1-3">Ερώτημα 3</h3>
+<p>Το ερώτημα 3 υλοποιείται από τα αρχεία:</p>
+<ul>
+<li><a href="./q3/q3.py"><strong>q3.py</strong></a></li>
+<li><a href="./q3/knearestbrute.py"><strong>knearestbrute.py</strong></a></li>
+<li><a href="./q3/knntest.py"><strong>knntest.py</strong></a></li>
+</ul>
+<p>Το <a href="./q3/knearestbrute.py"><strong>knearestbrute.py</strong></a> είναι η δικιά μας υλοποίηση knearestneighbour classifier, η οποία χρησιμοποιεί dtw me harvesine για να υπολογίσει αποστάσεις μεταξύ trajectories. Η αναζήτηση γίνεται εξαντλητικά. Η υλοποίηση είναι περίπου ίδια με την υλοποίηση που είχαμε φτιάξει στην προηγούμενη εργασία, ελαφρώς διαφορετική, ώστε να δουλεύει με τα δεδομένα που δίνονται.<br>
+To <a href="./q3/knntest.py"><strong>knntest.py</strong></a> υλοποιεί 10-fold cross validation για το 1/10 του train_set χρησιμοποιώντας τον classifier knearestbrute. Το 10-fold cross-validation υλοποιήθηκε από εμάς.</p>
+<p>Τα αποτελέσματα είναι τα παρακάτω:</p>
+<ul>
+<li><em>Precision</em> :  	0.872995</li>
+<li><em>Recall</em>: 	    0.876711</li>
+<li><em>F1</em> :		    0.872153</li>
+<li><em>Accuracy</em> : 	    0.955384</li>
+<li><em>Time Taken</em> :    13599.5 sec</li>
+</ul>
+<p>To <a href="./q3/q3.py"><strong>q3.py</strong></a> υλοποιεί το ζητούμενο του ερωτήματος 3. Διαβάσει τα <a href="./sets/train_set.csv">train_set</a>, <a href="./sets/test_set_a2.csv">test_set_a2</a> κάνει fit από το <a href="./sets/train_set.csv">train_set</a> και κάνει  predict το <a href="./sets/test_set_a2.csv">test_set</a>. Γράφει τα αποτελέσματα στο <a href="./sets/testSet_JourneyPatternIDs.csv"><strong>testSet_JourneyPatternIDs.csv</strong></a></p>
+
+</body>
+</html>
